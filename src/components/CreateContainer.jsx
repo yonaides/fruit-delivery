@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -92,7 +93,6 @@ const CreateContainer = () => {
     setIsLoading(true);
 
     try {
-
       if (!title || !calories || !imageAsset || !price || !category) {
         setFields(true);
         setMsg("Requied fields can't be empty");

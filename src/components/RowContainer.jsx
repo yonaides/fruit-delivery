@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
 import { MdShoppingBasket } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -8,7 +9,7 @@ import { actionType } from "../context/reducer";
 function RowContainer({ flag, data, scrollValue }) {
   const rowContainer = useRef();
   const [items, setItems] = useState([]);
-  const [{ cartItems, }, dispatch] = useStateValue();
+  const [{ cartItems }, dispatch] = useStateValue();
 
   const addToCart = (item) => {
     setItems([...cartItems, item]);
@@ -25,7 +26,6 @@ function RowContainer({ flag, data, scrollValue }) {
     rowContainer.current.scrollLeft += scrollValue;
   }, [scrollValue]);
 
-  
   return (
     <div
       ref={rowContainer}
